@@ -21,7 +21,7 @@ internal class WeekViewViewState(
         val totalHeaderHeight = config.getTotalHeaderHeight().toInt()
         val dynamicHourHeight = (viewHeight - totalHeaderHeight) / config.hoursPerDay
 
-        if (areDimensionsInvalid || scrollToDate != null) {
+        if (areDimensionsInvalid || scrollToDate != null || scrollToHour != null) {
             config.effectiveMinHourHeight = max(config.minHourHeight, dynamicHourHeight)
 
             areDimensionsInvalid = false
